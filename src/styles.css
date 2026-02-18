@@ -1,0 +1,590 @@
+/* =========================
+   VARIABLES
+========================= */
+:root{
+  --bg: #f5f7fb;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e5e7eb;
+  --blue: #0b63a9;
+  --blue2: #0a4f86;
+  --card: #ffffff;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.10);
+  --radius: 18px;
+  --radius2: 22px;
+}
+
+/* =========================
+   RESET
+========================= */
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin:0;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial;
+
+  color: var(--text);
+  background: #fff;
+}
+
+button{
+  font-family: inherit;
+}
+
+/* =========================
+   LOGIN
+========================= */
+
+.loginShell{
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+}
+
+/* LEFT IMAGE */
+
+.loginLeft{
+  position: relative;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.10),
+      rgba(255,255,255,0.75)
+    ),
+
+    url("https://images.unsplash.com/photo-1580281658628-9a75f2f186e9?auto=format&fit=crop&w=1600&q=60");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.loginOverlay{
+  height: 100%;
+  padding: 70px;
+
+  display:flex;
+  flex-direction: column;
+}
+
+.loginOverlay h1{
+
+  margin:0;
+
+  font-size: 52px;
+  font-weight: 800;
+
+  line-height: 1.05;
+
+  max-width: 600px;
+}
+
+.loginOverlay p{
+
+  margin-top: 20px;
+
+  font-size: 20px;
+
+  max-width: 520px;
+
+  font-weight: 600;
+}
+
+.loginFooter{
+
+  margin-top: auto;
+
+  color: rgba(15,23,42,0.7);
+
+  font-size: 14px;
+}
+
+
+/* RIGHT FORM */
+
+.loginRight{
+
+  display:flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 40px;
+}
+
+/* LOGO */
+
+.brandRow{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  margin-bottom: 20px;
+}
+
+.brandMark{
+
+  font-size: 40px;
+
+  font-weight: 900;
+}
+
+.brandMark.big{
+
+  font-size: 46px;
+}
+
+.brandTitle{
+
+  font-size: 22px;
+}
+
+
+/* CARD */
+
+.loginCard{
+
+  width: 420px;
+
+  border-radius: 16px;
+
+  border: 1px solid var(--border);
+
+  padding: 30px;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+.loginCard h2{
+
+  margin-bottom: 20px;
+
+  font-size: 30px;
+}
+
+
+/* FORM */
+
+.form{
+
+  display:flex;
+
+  flex-direction: column;
+
+  gap:16px;
+}
+
+.label{
+
+  display:flex;
+
+  flex-direction: column;
+
+  font-size: 14px;
+
+  color: var(--muted);
+}
+
+.input{
+
+  border:none;
+
+  border-bottom: 1px solid #cbd5e1;
+
+  padding: 10px;
+
+  font-size: 16px;
+
+  outline:none;
+}
+
+.input:focus{
+
+  border-color: var(--blue);
+}
+
+/* ROW */
+
+.loginRow{
+
+  display:flex;
+
+  justify-content: space-between;
+
+  align-items:center;
+}
+
+/* BUTTON */
+
+.primaryBtn{
+
+  margin-top: 10px;
+
+  padding: 14px;
+
+  border-radius: 12px;
+
+  border:none;
+
+  background: var(--blue);
+
+  color:white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor:pointer;
+}
+
+.primaryBtn:hover{
+
+  background: var(--blue2);
+}
+
+/* LINKS */
+
+.linkBtn{
+
+  border:none;
+
+  background:none;
+
+  color: var(--blue);
+
+  cursor:pointer;
+}
+
+.linkBtn.muted{
+
+  margin-top: 10px;
+}
+
+/* ERROR */
+
+.errorBox{
+
+  background:#ffe4e6;
+
+  border:1px solid #f43f5e;
+
+  padding:10px;
+
+  border-radius:10px;
+
+  color:#9f1239;
+
+  font-weight:600;
+}
+
+/* =========================
+   PORTAL LAYOUT
+========================= */
+
+.appShell{
+
+  min-height: 100vh;
+
+  display:grid;
+
+  grid-template-columns: 260px 1fr;
+
+  background: var(--bg);
+}
+
+/* SIDEBAR */
+
+.sidebar{
+
+  background:white;
+
+  border-right: 1px solid var(--border);
+
+  padding:20px;
+}
+
+.navSectionTitle{
+
+  margin-top: 20px;
+
+  font-size: 12px;
+
+  color:#94a3b8;
+
+  font-weight:700;
+}
+
+.navItem{
+
+  display:flex;
+
+  gap:10px;
+
+  padding:10px;
+
+  margin-top:5px;
+
+  border-radius:10px;
+
+  text-decoration:none;
+
+  color:#334155;
+
+  font-weight:600;
+}
+
+.navItem:hover{
+
+  background:#f1f5f9;
+}
+
+.navItem.active{
+
+  background:#e0efff;
+
+  color: var(--blue);
+}
+
+
+/* MAIN */
+
+.main{
+
+  display:flex;
+
+  flex-direction: column;
+}
+
+
+/* TOPBAR */
+
+.topbar{
+
+  height:60px;
+
+  background:white;
+
+  border-bottom:1px solid var(--border);
+
+  display:flex;
+
+  justify-content: flex-end;
+
+  align-items:center;
+
+  padding: 0 20px;
+}
+
+.topbarRight{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:20px;
+}
+
+.userBox{
+
+  display:flex;
+
+  flex-direction: column;
+}
+
+.userName{
+
+  font-weight:700;
+}
+
+.userRole{
+
+  font-size:12px;
+
+  color: var(--muted);
+}
+
+.ghostBtn{
+
+  border:none;
+
+  padding:8px 12px;
+
+  border-radius:10px;
+
+  cursor:pointer;
+
+  background:#f1f5f9;
+}
+
+.ghostBtn:hover{
+
+  background:#e2e8f0;
+}
+
+/* CONTENT */
+
+.content{
+
+  padding: 30px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.grid2{
+
+  display:grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap:20px;
+}
+
+.card{
+
+  background:white;
+
+  border-radius: var(--radius2);
+
+  padding:20px;
+
+  box-shadow: var(--shadow);
+
+  min-height:300px;
+}
+
+.cardHeader{
+
+  font-weight:700;
+
+  margin-bottom: 10px;
+}
+
+.cardBody{
+
+  height:200px;
+}
+
+.centerAction{
+
+  display:flex;
+
+  flex-direction: column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  height:100%;
+}
+
+.circlePlus{
+
+  width:80px;
+
+  height:80px;
+
+  border-radius:50%;
+
+  border:3px solid var(--blue);
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-size:40px;
+
+  color: var(--blue);
+}
+
+.actionTitle{
+
+  margin-top:10px;
+
+  font-size:18px;
+
+  font-weight:700;
+
+  color: var(--blue);
+}
+
+
+/* =========================
+   PAGES
+========================= */
+
+.pageBox{
+
+  background:white;
+
+  padding:20px;
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+}
+
+.pageTitle{
+
+  font-size:28px;
+
+  margin-bottom:10px;
+}
+
+.pageDesc{
+
+  color: var(--muted);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px){
+
+.loginShell{
+
+grid-template-columns: 1fr;
+}
+
+.loginLeft{
+
+display:none;
+}
+
+.grid2{
+
+grid-template-columns: 1fr;
+}
+
+.appShell{
+
+grid-template-columns: 70px 1fr;
+}
+
+.navItem span{
+
+display:none;
+}
+
+}
