@@ -1,0 +1,73 @@
+Listado de rutas de carpetas
+El número de serie del volumen es 5220-BD1F
+C:.
+|   eslint.config.js
+|   estructura.txt
+|   index.html
+|   package-lock.json
+|   package.json
+|   README.md
+|   tailwind.config.js
+|   vite.config.js
+|   
++---node_modules
+|                
++---pdfs
+|       prueba.pdf
+|       
++---public
+|       vite.svg
+|       
+\---src
+    |   main.jsx
+    |   tailwind.css
+    |   
+    +---app
+    |   |   App.jsx
+    |   |   
+    |   +---layout
+    |   |       MainLayout.jsx
+    |   |       
+    |   \---routes
+    |           AppRoutes.jsx
+    |           
+    +---assets
+    |       react.svg
+    |       
+    +---components
+    |   \---ui
+    |           Button.jsx
+    |           Icon.jsx
+    |           Modal.jsx
+    |           NavItem.jsx
+    |           
+    +---features
+    |   +---auth
+    |   |       LoginPage.jsx
+    |   |       
+    |   +---medicos
+    |   |   |   MedicosPage.jsx
+    |   |   |   useMedicos.js
+    |   |   |   
+    |   |   \---components
+    |   |           CardsMedicos.jsx
+    |   |           TablaMedicos.jsx
+    |   |           
+    |   +---pacientes
+    |   \---portal
+    |       \---pages
+    |               Coberturas.jsx
+    |               Home.jsx
+    |               NotFound.jsx
+    |               Profesionales.jsx
+    |               ReservarEstudio.jsx
+    |               ReservarTurno.jsx
+    |               Resultados.jsx
+    |               TurnosAgendados.jsx
+    |               
+    +---services
+    |       apiClient.js
+    |       
+    \---styles
+            global.css
+        
