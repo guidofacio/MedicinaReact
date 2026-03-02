@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Routes, Route, Navigate} from "react-router-dom";
 import MedicosPage from './../features/medicos/MedicosPage';
+import ResultadosPage from './../features/medicos/ResultadosPage';
 import LoginPage from "../features/auth/LoginPage";
 import MainLayout from "./layout/MainLayout";
 import Icon from "../components/ui/Icon";
@@ -90,7 +91,7 @@ function ReservarTurno() { return <PageTitle>Reservar turno</PageTitle>; }
 function ReservarEstudio() { return <PageTitle>Reservar estudio</PageTitle>; }
 function TurnosAgendados() { return <PageTitle>Turnos agendados</PageTitle>; }
 function Profesionales() { return <><PageTitle>Profesionales médicos</PageTitle><MedicosPage /></>; }
-function Resultados() { return <PageTitle>Resultados de estudios</PageTitle>; }
+function Resultados() { return <><PageTitle>Resultados de estudios</PageTitle><ResultadosPage /> </>; }
 function NotFound() { return <PageTitle>Ruta no encontrada</PageTitle>; }
 
 function PageTitle({ children }) {
